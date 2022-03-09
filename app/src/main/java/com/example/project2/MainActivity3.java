@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -23,7 +24,10 @@ public class MainActivity3 extends AppCompatActivity {
 
         webView = findViewById(R.id.WebView1);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://google.nl");
+        webView.loadUrl("https://fmis.tue.nl");
+
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
     }
 
     @Override
