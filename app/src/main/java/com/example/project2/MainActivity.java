@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
 
-        androidImageButton = (ImageButton) findViewById(R.id.imageButton);
+        androidImageButton = (ImageButton) findViewById(R.id.mapButton);
 
         androidImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-        androidImageButton2 = (ImageButton) findViewById(R.id.imageButton2);
+        androidImageButton2 = (ImageButton) findViewById(R.id.roomButton);
         androidImageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-        androidImageButton3 = (ImageButton) findViewById(R.id.imageButton3);
+        androidImageButton3 = (ImageButton) findViewById(R.id.eventButton);
         androidImageButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-        androidImageButton4 = (ImageButton) findViewById(R.id.imageButton4);
+        androidImageButton4 = (ImageButton) findViewById(R.id.settingButton);
         androidImageButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

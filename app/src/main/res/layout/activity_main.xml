@@ -10,11 +10,15 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/maps"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="411dp"
-        android:layout_height="641dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
 
     </androidx.fragment.app.FragmentContainerView>
@@ -24,43 +28,96 @@
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginTop="644dp"
+        android:visibility="gone"
         app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/button1" />
+        app:srcCompat="@drawable/button1"
+        tools:visibility="gone" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="91dp"
         android:layout_height="83dp"
         android:layout_marginTop="644dp"
+        android:visibility="gone"
         app:layout_constraintHorizontal_bias="0.296"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/button2" />
+        app:srcCompat="@drawable/button2"
+        tools:visibility="gone" />
 
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="95dp"
         android:layout_height="71dp"
         android:layout_marginTop="656dp"
+        android:visibility="gone"
         app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/button4" />
+        app:srcCompat="@drawable/button4"
+        tools:visibility="gone" />
 
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="110dp"
         android:layout_height="77dp"
         android:layout_marginTop="644dp"
+        android:visibility="gone"
         app:layout_constraintHorizontal_bias="0.617"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/button3" />
+        app:srcCompat="@drawable/button3"
+        tools:visibility="gone" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maps">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mapButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/button1" />
+
+            <ImageButton
+                android:id="@+id/roomButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/button2" />
+
+            <ImageButton
+                android:id="@+id/eventButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/button3" />
+
+            <ImageButton
+                android:id="@+id/settingButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/button4" />
+
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
