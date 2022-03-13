@@ -28,6 +28,7 @@ public class MainActivity3 extends AppCompatActivity {
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true);
     }
 
     @Override
