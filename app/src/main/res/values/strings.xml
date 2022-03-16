@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Project 2</string>
+    <string name="pin_icon_label">Map section</string>
+    <string name="book_icon_label">Online book section</string>
+    <string name="event_icon_label">Event section</string>
+    <string name="settings_icon_label">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

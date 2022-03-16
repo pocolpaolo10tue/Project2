@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/maps_Fragment"
+        android:enabled="true"
+        android:icon="@drawable/pin_icon"
+        android:title="@string/pin_icon_label"/>
+    <item
+        android:id="@+id/book_Fragment"
+        android:enabled="true"
+        android:icon="@drawable/book_icon"
+        android:title="@string/book_icon_label"/>
+    <item
+        android:id="@+id/event_Fragment"
+        android:enabled="true"
+        android:icon="@drawable/event_icon"
+        android:title="@string/event_icon_label"/>
+    <item
+        android:id="@+id/settings_Fragment"
+        android:enabled="true"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/settings_icon_label"/>
+</menu>
