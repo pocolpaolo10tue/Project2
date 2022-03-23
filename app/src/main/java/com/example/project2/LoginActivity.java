@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         System.out.println("hoi");
         String email = InputEmail.getText().toString().trim();
         String password = InputPassword.getText().toString().trim();
-//        Boolean tuemail = email.substring(email.length()-6) == "tue.nl";
+        Boolean tuemail = email.substring(email.length()-6).equals("tue.nl");
         if (TextUtils.isEmpty(email)) {
             InputEmail.setError("Email cannot be empty");
             InputEmail.requestFocus();
@@ -53,8 +53,12 @@ public class LoginActivity extends AppCompatActivity {
             InputPassword.setError("Password cannot be empty");
             InputPassword.requestFocus();
         } else if (password.length() <= 5) {
+            // TODO: Pass 6 length and one number
             InputPassword.setError("Password has to be atleast 5 characters");
             InputPassword.requestFocus();
+        } else if (!tuemail) {
+            InputEmail.setError("Please use a tu/e mail.");
+            InputEmail.requestFocus();
         } else {
             mAuth.createUserWithEmailAndPassword(email, password).
                     addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -93,6 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Toast.makeText(LoginActivity.this,
                                         "User Logged in", Toast.LENGTH_SHORT).show();
+                                // TODO: Go back to mainactivity
                             } else {
                                 Toast.makeText(LoginActivity.this, "Error: " +
                                         task.getException().getMessage(), Toast.LENGTH_SHORT).show();
