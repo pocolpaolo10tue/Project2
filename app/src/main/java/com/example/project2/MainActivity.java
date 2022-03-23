@@ -1,34 +1,36 @@
 package com.example.project2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Fragment mapsFragment = new MapsFragment();
-
-
-
-        //BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .add(R.id.bottomNavigationView, mapsFragment)
-                .commit();
-
-        //.setOnItemSelectedListener(navListener);
+//        setContentView(R.layout.fragment_login);
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+//        mAuth = FirebaseAuth.getInstance();
+//
+//        Fragment mapsFragment = new MapsFragment();
+//
+//
+//
+//        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
+//
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        fragmentManager.beginTransaction()
+//                .add(R.id.bottomNavigationView, mapsFragment)
+//                .commit();
+//                .setOnItemSelectedListener(navListener);
 
     }
 
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // By using switch we can easily get
         // the selected fragment
         // by using there id.
-        Fragment selectedFragment = null;
+        Fragment selectedFragment = new SettingsFragment();
             if (item.getItemId() == R.id.maps_Fragment) {
                 selectedFragment = new MapsFragment();
             }
